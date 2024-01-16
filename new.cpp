@@ -670,17 +670,121 @@
 // return 0;
 // }
 
+// //19- A. Die Roll
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
+
+// int main(){
+
+// // int x=5;
+// // int y=4;
+// int prob,rem,x,y;
+// cin>>x>>y;
+// int maxValue=max(x,y);
+// cout<<maxValue<<"maxValue"<<endl;
+// prob=(6-maxValue)+1;
+// cout<<prob<<"prob"<<endl;
+// rem=6%prob;
+// cout<<rem<<"rem"<<endl;
+// if(prob==6){
+// cout<<1<<'/'<<1;
+// }
+// else if(prob==0){
+// cout<<0<<'/'<<1;
+// }
+// else if(prob<6){
+//     if(rem==0){
+//         cout<<prob/prob<<'/'<<6/prob;
+//     }else{
+//         cout<<prob/rem<<'/'<<6/rem;
+//     }
+// }
+//     return 0;
+// }
+
+// 19-better A Die Roll 
+// try to find the greatest common divisor GCD 
+// #include <iostream>
+// #include <algorithm>
+
+// int main() {
+//     int y, w;
+//     std::cin >> y >> w;
+
+//     int max_roll = std::max(y, w);  // Find the maximum of Yakko and Wakko's rolls
+
+//     int favorable_outcomes = 6 - max_roll + 1;  // Dot wins if she rolls a number greater than or equal to max_roll
+
+//     // Find the greatest common divisor (GCD) of favorable_outcomes and 6
+//     int gcd = std::__gcd(favorable_outcomes, 6);
+
+//     // Output the probability in the form of irreducible fraction
+//     std::cout << favorable_outcomes / gcd << '/' << 6 / gcd << std::endl;
+
+//     return 0;
+// }
+
+// 19-another one based on the prob theory
+
+// #include<iostream>
+// #include<cmath>
+// #include<string>
+// using namespace std;
 
 
+// int main()
+// {
+// 	int x,y;
+// 	string die_roll[6]={"1/6","1/3","1/2","2/3","5/6","1/1"};
+// 	cin>>x>>y;
+// 	x=max(x,y);
+
+// 	cout << die_roll[6-x];
+
+// 	return 0 ;
+// }
 
 
+// 20-A. Shaass and Oskols
 
+#include <iostream>
+#include <vector>
 
+using namespace std;
 
+int main(){
 
+int Twire,Kwire,pos,Knum;
 
+cin>>Twire;
+vector <int> birds(Twire);
 
+for(int i=1;i<=Twire;i++){
+    cin>>birds[i];
+}
+cin>>Knum;
 
+for(int i=1;i<=Knum;i++){
+   cin>>Kwire>>pos;
+    
+    if(Kwire !=1 ){
+        birds[Kwire-1]+=pos-1;
+    }
+    
+    if(Kwire !=Twire ){
+
+        birds[Kwire+1]+=birds[Kwire]-pos;
+    }
+    birds[Kwire]=0;
+ 
+}
+
+for(int i=1;i<=Twire;i++){
+    cout<<birds[i]<<"\n";
+}
+    return 0;
+}
 
 
 
