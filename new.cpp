@@ -748,45 +748,70 @@
 
 // 20-A. Shaass and Oskols
 
-#include <iostream>
-#include <vector>
+// #include <iostream>
+// #include <vector>
 
-using namespace std;
+// using namespace std;
 
-int main(){
+// int main(){
 
-int Twire,Kwire,pos,Knum;
+// int Twire,Kwire,pos,Knum;
 
-cin>>Twire;
-vector <int> birds(Twire);
+// cin>>Twire;
+// vector <int> birds(Twire);
 
-for(int i=1;i<=Twire;i++){
-    cin>>birds[i];
-}
-cin>>Knum;
+// for(int i=1;i<=Twire;i++){
+//     cin>>birds[i];
+// }
+// cin>>Knum;
 
-for(int i=1;i<=Knum;i++){
-   cin>>Kwire>>pos;
+// for(int i=1;i<=Knum;i++){
+//    cin>>Kwire>>pos;
     
-    if(Kwire !=1 ){
-        birds[Kwire-1]+=pos-1;
-    }
+//     if(Kwire !=1 ){
+//         birds[Kwire-1]+=pos-1;
+//     }
     
-    if(Kwire !=Twire ){
+//     if(Kwire !=Twire ){
 
-        birds[Kwire+1]+=birds[Kwire]-pos;
-    }
-    birds[Kwire]=0;
+//         birds[Kwire+1]+=birds[Kwire]-pos;
+//     }
+//     birds[Kwire]=0;
  
-}
+// }
 
-for(int i=1;i<=Twire;i++){
-    cout<<birds[i]<<"\n";
-}
-    return 0;
-}
+// for(int i=1;i<=Twire;i++){
+//     cout<<birds[i]<<"\n";
+// }
+//     return 0;
+// }
+//21- A. juicer
 
+// #include <iostream>
 
+// using namespace std;
+
+// int main(){
+
+// int wast,mixer,n,section=0,count=0;
+
+// cin>>n>>mixer>>wast;
+// int orang[n];
+// for(int i=0;i<n;i++){
+//     cin>>orang[i];
+// }
+// for(int i=0;i<n;i++){
+//     if(orang[i]<=mixer){
+//         section+=orang[i];
+//         if(section>wast){
+//             count++;
+//             section=0;
+//         }
+//     }
+// }
+// cout<<count;
+//     return 0 ;
+// }
 
 
 
